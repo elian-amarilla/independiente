@@ -34,20 +34,20 @@
             <form class="Formulario">
                 <label class="icono"><i class="fas fa-user"></i></label>
                <div class="Formulario__nombres">
-                    <input type="text" placeholder="Nombre/s">
-                    <input type="text" placeholder="Apellido/s">
+                    <input type="text" id="form-nombre" placeholder="Nombre/s" autocomplete="off" required>
+                    <input type="text" id="form-apellido" placeholder="Apellido/s" autocomplete="off" required>
                </div>
                <div class="Formulario__grid">
                     <div class="Formulario__correo">
                         <div class="separador">
-                            <label for="correo"><i class="far fa-envelope"></i></label>
-                            <input type="email" id="correo" placeholder="Correo electrónico">
+                            <label for="form-correo"><i class="far fa-envelope"></i></label>
+                            <input type="email" id="form-correo" placeholder="Correo electrónico" autocomplete="off" required>
                         </div>
                     </div>
                     <div class="Formulario__documento">
                         <div class="separador">
-                            <label for="dni"><i class="fas fa-portrait"></i></label>
-                            <input type="text" id="dni" placeholder="Número de documento">
+                            <label for="form-dni"><i class="fas fa-portrait"></i></label>
+                            <input type="text" id="form-dni" maxlength="8" placeholder="Número de documento (sin puntos)" autocomplete="off" required>
                         </div>
                     </div>
                     <div class="Formulario__sexo">
@@ -61,21 +61,22 @@
                     </div>
                     <div class="Formulario__cuit">
                         <div class="separador">
-                            <label for="cuit"><i class="fas fa-passport"></i></label>
-                            <input type="text" id="cuit" placeholder="Cuit">    
+                            <label for="form-cuit"><i class="fas fa-passport"></i></label>
+                            <input type="text" id="form-cuit" maxlength="13" placeholder="Cuit (99-99999999-9)" autocomplete="off" required>    
                         </div>
                     </div>
                     <div class="Formulario__telefono">
                        <div class="separador">
-                            <label for="celular"><i class="fas fa-phone-alt"></i></label>
-                            <input type="text" id="celular" placeholder="Teléfono">
+                            <label for="form-celular"><i class="fas fa-phone-alt"></i></label>
+                            <input type="text" maxlength="12" id="form-celular" placeholder="Teléfono (999 999 9999)" autocomplete="off" required>
                        </div>
                     </div>
                     <div class="Formulario__boton">
-                        <input type="submit" value="Enviar">
+                        <input type="submit" value="Enviar" id="btn-enviar">
                     </div>
                </div>
             </form>
     </div>
+    <script src="scripts/form-Asociarse.js"></script>
 </body>
 </html>

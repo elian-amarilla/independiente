@@ -114,6 +114,7 @@ header label:hover{
 }
 .navegacion li:hover{
     background: rgba(0,0,0,0.3);
+    transition: background 1s;
     animation-name: seleccion-menu;
     animation-duration: 1s;
     animation-fill-mode: forwards;
