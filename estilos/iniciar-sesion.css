@@ -17,7 +17,7 @@ main{
 }
 aside{
     width: 40%;
-    background-image: url(/archivos/imagenes/inicio-sesion/fondo.webp);
+    background-image: url(archivos/imagenes/inicio-sesion/fondo.webp);
     background-repeat: no-repeat;
     clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
     background-size: cover;

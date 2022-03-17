@@ -12,7 +12,7 @@ main{
     min-height: 100vh;
     max-height: 100vh;
     max-width: 100vw;
-    background-image:url(/archivos/imagenes/ultimo-partido.webp);
+    background-image:url(archivos/imagenes/ultimo-partido.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment:fixed;
@@ -72,7 +72,7 @@ main{
 }
 .Siguiente-Partido{
     
-    background-image:url(/archivos/imagenes/estadio.webp);
+    background-image:url(archivos/imagenes/estadio.webp);
     min-height: 100vh;
     max-height: 100vh;
     max-width: 100vw;
@@ -257,7 +257,7 @@ main{
 }
 @media screen and (max-width: 810px) {
     .Ultimo-Resultado{
-        background-image: url(/archivos/imagenes/ultimo-partido2.webp);
+        background-image: url(archivos/imagenes/ultimo-partido2.webp);
     }
     .seccion-noticias {
         display: flex;
