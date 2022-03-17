@@ -4,7 +4,9 @@ main{
     display: flex;
     width: 100%;
     height: 100vh;
-    background: #c70101;
+    /* background: #c70101; */
+    background: #021124;
+    user-select: none;
 }
 .cuerpo{
     display: flex;
@@ -18,14 +20,13 @@ aside{
     background-image: url(/archivos/imagenes/inicio-sesion/fondo.webp);
     background-repeat: no-repeat;
     clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
-    background-position: center;
+    background-size: cover;
 }
 .escudo{
     margin-bottom: 3em;
 }
 .escudo img{
-    width: 55px;
-    height: 55px;
+    width: 100px;
 }
 
 .bienvenida{
@@ -34,6 +35,7 @@ aside{
     font-style: italic;
     text-align: center;
     color: #fdc52c;
+    color: #c70101;
     margin-bottom: 1em;
 }
 form label{
@@ -41,6 +43,7 @@ form label{
     font-size: 0.9em;
     margin-bottom: 12px;
     color: #F9FDF9;
+    color: #fdc52c;
 }
 .formulario-iniciar-sesion{
     display: flex;
@@ -53,7 +56,7 @@ input{
     border-style: none;
     background: transparent;
     margin-bottom: 25px;
-    border: 2px ridge #FFF;
+    border: 2px ridge #fdc52c;
     border-radius: 15px;
     padding: 7px;
     font-size: 1.5em;
@@ -83,14 +86,14 @@ input:focus{
         background: #DDD;
     }
     100%{
-        background: linear-gradient(to left, #DDD, #f00);
+        background: linear-gradient(to left, #DDD, #021124);
+        border: 2px ridge transparent;
     }
 }
 #boton-entrar:hover{
     transition: background 1s;
     animation-name: enviar;
     animation-duration: 0.5s;
-    border: none;
     animation-fill-mode: forwards;
 }
 

@@ -25,17 +25,18 @@ body{
     border-radius: 15px;
     box-shadow: 0 0 10px 3px black;
     margin-bottom: 50%;
+    user-select: none;
 }
 .icono{
+    display: flex;
+    flex-direction: row;
     border: 4px solid #FFF;
     border-radius: 50%;
     padding: 1em;
     margin: 20px;
 }
-.icono i{
-    font-size: 2.5em;
-    text-align: center;
-    color: #FFF;
+.icono img{
+    width: 5em;
 }
 
 .Formulario input{
