@@ -1,0 +1,146 @@
+body{
+    background-color: #f8f8f8;
+}
+h1{
+    font-family: 'Goblin One', cursive;
+}
+h2,p{
+    font-family: 'Teko', sans-serif;
+}
+h2{
+    padding-top: 15px;
+}
+.historia-fondo{
+    display: flex;
+    height: 60vh;
+    width: 100%;
+    background-color: rgba(0,0,0,.7);
+    background-image:url(/archivos/imagenes/historia/background.webp);
+    background-repeat: no-repeat;
+    background-position: center;     
+    color: #FFF;
+    justify-content: center;
+    align-items: center;
+}
+.historia-fondo:hover{
+    cursor: pointer;
+}
+.historia-opacidad{
+    background: rgba(0,0,0,.2);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "area1"
+    "area2";
+}
+
+.historia-opacidad h1{
+    grid-area: area2;
+    justify-self: center;
+    align-self: center;
+    font-size: 2.5em;
+    margin-left: 0.8em;
+}
+.historia-contenedor{
+    display: block;
+}
+.historia-contenedor__cuerpo{
+    display: flex;
+    
+    margin: 100px auto;
+    height: 80%;
+    width: 80%;
+    
+}
+.revertido {
+    flex-direction: row-reverse;
+}
+.revertido .historia-contenedor__cuerpo__descripcion h2{
+    text-align: center;
+}
+.revertido .historia-contenedor__cuerpo__descripcion{
+    padding-left: 15px;
+}
+.revertido .historia-contenedor__cuerpo__descripcion div{
+    float: right;
+}
+.historia-contenedor__cuerpo__descripcion{
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+}
+.historia-contenedor__cuerpo__descripcion h2{
+    font-size: 2.7em;
+    margin: 0 7px;
+    margin-bottom: 1em;
+    text-align: center;
+}
+.historia-contenedor__cuerpo__descripcion p{
+    font-size: 1.7em;
+    align-self: center;
+    justify-self: center;
+    margin: 10px;
+}
+.historia-contenedor__cuerpo__imagen{
+    overflow: hidden;
+    flex-grow: 1;
+    width: 100%;
+    background: #000;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    box-shadow: 2px 2px 2px 2px #000;
+}
+.historia-contenedor__cuerpo__imagen img{
+    overflow: hidden;
+   text-align: center;
+   width: 100%;
+   height: 100%;
+   object-fit: fill;
+    overflow: auto;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    opacity: .8;
+    
+}
+.historia-contenedor__cuerpo__descripcion div{
+    display: inline-flex;
+    float: left;
+    margin: 10px;
+    padding: 10px 40px;
+    background: #c70101;
+    border: 1px solid black;
+    font-size: 1.5em;
+}
+
+.historia-contenedor__cuerpo__descripcion a{
+    text-decoration: none;
+    text-align: center;
+    color: #FFF;
+}
+
+.historia-contenedor__cuerpo__descripcion a:hover, 
+.historia-contenedor__cuerpo__descripcion a div:hover{
+    background: #000;
+    transition: background 1.5s;
+}
+@keyframes zoom{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+.historia-contenedor__cuerpo:hover .historia-contenedor__cuerpo__imagen img{
+    cursor: pointer;
+    animation-name: zoom;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 660px){
+    .historia-contenedor__cuerpo{
+        flex-direction: column-reverse;
+    }
+}

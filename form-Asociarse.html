@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="archivos/imagenes/iconos/apple-icon-57x57.webp">
+    <link rel="apple-touch-icon" sizes="60x60" href="archivos/imagenes/iconos/apple-icon-60x60.webp">
+    <link rel="apple-touch-icon" sizes="72x72" href="archivos/imagenes/iconos/apple-icon-72x72.webp">
+    <link rel="apple-touch-icon" sizes="76x76" href="archivos/imagenes/iconos/apple-icon-76x76.webp">
+    <link rel="apple-touch-icon" sizes="114x114" href="archivos/imagenes/iconos/apple-icon-114x114.webp">
+    <link rel="apple-touch-icon" sizes="120x120" href="archivos/imagenes/iconos/apple-icon-120x120.webp">
+    <link rel="apple-touch-icon" sizes="144x144" href="archivos/imagenes/iconos/apple-icon-144x144.webp">
+    <link rel="apple-touch-icon" sizes="152x152" href="archivos/imagenes/iconos/apple-icon-152x152.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="archivos/imagenes/iconos/apple-icon-180x180.webp">
+    <link rel="icon" type="image/png" sizes="192x192"  href="archivos/imagenes/iconos/android-icon-192x192.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="archivos/imagenes/iconos/favicon-32x32.webp">
+    <link rel="icon" type="image/png" sizes="96x96" href="archivos/imagenes/iconos/favicon-96x96.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="archivos/imagenes/iconos/favicon-16x16.webp">
+    <link rel="manifest" href="archivos/imagenes/iconos/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.webp">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Formulario para petición de nuevo socio."/>
+    <meta name="keywords" content="independiente, rey de copas, el rojo, asociarse, socios"/>
+    <meta name="author" content="Elian Amarilla" />
+    <link rel="stylesheet" href="estilos/formulario-asociarse.css">
+    <title>C.A.I - Asociarse</title>
+    <script src="https://kit.fontawesome.com/a5be6757e5.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="Contenedor">
+            <form class="Formulario">
+                <label class="icono"><i class="fas fa-user"></i></label>
+               <div class="Formulario__nombres">
+                    <input type="text" placeholder="Nombre/s">
+                    <input type="text" placeholder="Apellido/s">
+               </div>
+               <div class="Formulario__grid">
+                    <div class="Formulario__correo">
+                        <div class="separador">
+                            <label for="correo"><i class="far fa-envelope"></i></label>
+                            <input type="email" id="correo" placeholder="Correo electrónico">
+                        </div>
+                    </div>
+                    <div class="Formulario__documento">
+                        <div class="separador">
+                            <label for="dni"><i class="fas fa-portrait"></i></label>
+                            <input type="text" id="dni" placeholder="Número de documento">
+                        </div>
+                    </div>
+                    <div class="Formulario__sexo">
+                        <div class="separador">
+                            <label for="masc"><i class="fas fa-venus-mars"></i></label>
+                            <input type="radio" name="genero" id="masc" value="hombre">
+                            <label for="masc">Masculino</label>
+                            <input type="radio" name="genero" id="fem" value="mujer">
+                            <label for="fem">Femenino</label>
+                        </div>
+                    </div>
+                    <div class="Formulario__cuit">
+                        <div class="separador">
+                            <label for="cuit"><i class="fas fa-passport"></i></label>
+                            <input type="text" id="cuit" placeholder="Cuit">    
+                        </div>
+                    </div>
+                    <div class="Formulario__telefono">
+                       <div class="separador">
+                            <label for="celular"><i class="fas fa-phone-alt"></i></label>
+                            <input type="text" id="celular" placeholder="Teléfono">
+                       </div>
+                    </div>
+                    <div class="Formulario__boton">
+                        <input type="submit" value="Enviar">
+                    </div>
+               </div>
+            </form>
+    </div>
+</body>
+</html>

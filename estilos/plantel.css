@@ -1,0 +1,152 @@
+h1{
+    font-family: 'Goblin One', cursive;
+    margin-left: 1em;
+}
+h2{
+    font-family: 'Teko', sans-serif;
+}
+h1,h2{
+    color: #b70109;
+}
+p{
+    font-family: 'Teko', sans-serif;
+}
+.jugador, .jugador span{
+    color: #A9AB5B;
+    font-weight: bolder;
+}
+body{
+    background-color: #f8f8f8;
+}
+.Contenedor-flex{
+    display: flex;
+   margin: 0 8vw;
+   flex-direction: column;
+   flex-grow: 1;
+   flex-wrap: wrap;
+    align-items:center;
+}
+
+.Contenedor-flex h2{
+    font-size: 3em;
+    margin: 1em 0;
+}
+
+.jugador{
+    position: relative;
+    display: inline-grid;
+    grid-template-areas: "imagen"
+    "cuerpo";
+    max-height: 300px;
+    max-width: 200px;
+    box-shadow: 0 0 0 2px #000;
+    border-radius: 9px;
+    margin: 7px;
+}
+
+.jugador-img{
+    background: #000;
+    height: 100%;
+    grid-area: imagen;
+}
+.jugador-img img{
+    overflow: auto;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    object-fit:cover;
+    height: 100%;
+    width: 100%;
+}
+.numero{
+    position: absolute;
+    font-size: 2.6em;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    color: #000;
+}
+.jugador-info{
+    grid-area: cuerpo;
+   font-size: 1.5em;
+   padding: 0.8em 0.4em;
+   font-weight: bold;
+} 
+.arqueros, .defensores, .mediocampistas, .delanteros,.dt{
+    display: block;
+    text-align: center;
+}
+
+@media screen and (max-width: 534px) {
+    .Contenedor-flex{ 
+        margin: 0 3vw;
+    }
+    .jugador{
+        max-width: 150px;
+    }
+    .jugador-info{
+        font-size: 1.1em;
+    }
+    .numero{
+        font-size: 2.7em;
+    }
+    h1{
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .Contenedor-flex{  
+        margin: 0 3vw;
+    }
+    .jugador{
+        max-width: 120px;
+    }
+    .jugador-info{
+        font-size: 0.9em;
+    }
+    .numero{
+        font-size: 2.2em;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .Contenedor-flex{  
+        margin: 0 1vw;
+    }
+}
+
+@keyframes seleccionar-jugador {
+    from{
+        filter:opacity(1);
+        background-color: #000;
+    }
+    to{
+        background-color: #000;
+        filter:opacity(0.7);
+    }
+}
+
+.jugador:hover{
+    animation-name: seleccionar-jugador;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+.jugador:hover .jugador-img{
+    filter:opacity(0.7);
+    transition-duration: 1s ;
+}
+@keyframes subrayar {
+    from{
+        text-decoration: none;
+    }
+    to{
+        text-decoration: underline;
+    }
+}
+.jugador:hover p{
+    animation-name: subrayar;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}

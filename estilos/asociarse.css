@@ -1,0 +1,138 @@
+.inicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+*{
+    font-family: 'Nunito Sans', sans-serif;
+}
+.inicio h1{
+    color: #c70101;
+    font-size: 2.4em;
+    font-family: 'Goblin One', cursive, Georgia, 'Times New Roman', Times, serif;
+}
+.inicio p{
+    font-size: 1.2em;
+}
+
+.Asociarse{
+    display: flex;
+    justify-content:center;
+    margin: 5vh;
+}
+.Asociarse table{
+    width: 60vw;
+    border-collapse: collapse;
+    text-align: justify;
+}
+.Asociarse th{
+    
+    background: rgb(231, 231, 220);
+    padding: 10px;
+}
+.Asociarse td{
+    border-bottom: 1px solid black;
+    padding: 8px;
+    font-size: 1.1em;
+}
+
+.Asociarse tr:hover{
+    background: #C5C3A3;
+}
+
+.negrita{
+ font-weight: bold;
+}
+
+.precios, .alineado{
+    text-align: right;
+}
+
+.masinfo{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    border: 2px solid black;
+    border-radius: 0.6vw;
+    background: #1a1a1a;
+}
+.masinfo h3{
+    color: rgb(231, 231, 220);
+    padding: 15px 0;
+}
+
+.masinfo li{
+    color: rgb(231, 231, 220);
+    padding: 2px;
+}
+
+.contenedor-boton a{
+    text-decoration: none;
+}
+.boton-asociarse{
+    background: #c70101;
+    color: #FFF;
+    padding:  0.8em 3.6em;
+    margin: 50px 0;
+    border-radius: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.4em;
+}
+
+.boton-asociarse:hover{
+    background: #ac0909;
+    transition: background 1s;
+}
+
+.Atencion{
+    display: grid;
+    grid-template-areas: "info info" 
+    "col1 col2";
+    justify-content: center;
+    font-size: 1.15em;
+    gap: 1vw 15vw;
+}
+.Atencion-Columna1{
+    grid-area: col1;
+}
+.Atencion-Columna2{
+    grid-area: col2;
+}
+
+.Atencion ul{
+    list-style: none;
+}
+.Atencion li {
+    margin: 10px 0;
+}
+.Atencion li i{
+    margin-right: 10px;
+}
+
+.Atencion li:first-child{
+    font-weight: bold;
+    text-align: center;
+}
+
+.Atencion h3{
+    grid-area: info;
+    padding-top: 20px;
+    justify-self: center;
+}
+.Atencion i{
+    color: #F00;
+}
+@media screen and (max-width:600px){
+    .inicio p{
+        text-align: center;
+    }
+    .masinfo ul{
+        text-align: center;
+    }
+    .Atencion{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

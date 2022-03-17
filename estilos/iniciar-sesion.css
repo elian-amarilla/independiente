@@ -1,0 +1,156 @@
+@import url(normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&family=Nunito+Sans:wght@200&family=Teko:wght@300&display=swap');
+main{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: #c70101;
+}
+.cuerpo{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+aside{
+    width: 40%;
+    background-image: url(/archivos/imagenes/inicio-sesion/fondo.webp);
+    background-repeat: no-repeat;
+    clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
+    background-position: center;
+}
+.escudo{
+    margin-bottom: 3em;
+}
+.escudo img{
+    width: 55px;
+    height: 55px;
+}
+
+.bienvenida{
+    font-family: 'Goblin One', cursive;
+    font-size: 3em;
+    font-style: italic;
+    text-align: center;
+    color: #fdc52c;
+    margin-bottom: 1em;
+}
+form label{
+    font-family: 'Goblin One', cursive;
+    font-size: 0.9em;
+    margin-bottom: 12px;
+    color: #F9FDF9;
+}
+.formulario-iniciar-sesion{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+input{
+    text-decoration: none;
+    border-style: none;
+    background: transparent;
+    margin-bottom: 25px;
+    border: 2px ridge #FFF;
+    border-radius: 15px;
+    padding: 7px;
+    font-size: 1.5em;
+    font-family: 'Teko', sans-serif;
+    color: #FFF;
+}
+
+input::placeholder{
+    color: #F9FDF9;
+}
+input:focus{
+    outline-style: none;
+    border: 2px ridge #000;
+    border-radius: 15px;
+    transition: border 1s;
+    color: #FFF;
+}
+
+#boton-entrar{
+    width: 40%;
+}
+@keyframes enviar{
+    0%{
+        background: #FFF;
+    }
+    50%{
+        background: #DDD;
+    }
+    100%{
+        background: linear-gradient(to left, #DDD, #f00);
+    }
+}
+#boton-entrar:hover{
+    transition: background 1s;
+    animation-name: enviar;
+    animation-duration: 0.5s;
+    border: none;
+    animation-fill-mode: forwards;
+}
+
+#boton-entrar:hover{
+    color: #000;
+    transition: 1s;
+}
+a{
+    align-self: flex-start;
+    margin-left: 2%;
+    margin-top: 3%;
+}
+.boton-inicio{
+    padding: 12px;
+    background: #000;
+    border-radius: 50%;
+}
+.boton-inicio i{
+    font-size: 2em;
+    color: #fdc52c;
+}
+@keyframes agrandar{
+    from{
+
+    }
+    to{
+        transform: scale(1.3);
+    }
+}
+a:hover .boton-inicio{
+    animation-name: agrandar;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+a:hover i{
+    color:#c70101;
+    transition: color 1s;
+}
+
+@media screen and (max-width: 770px) {
+    .bienvenida{
+        font-size: 2em;
+    }
+}
+@media screen and (max-width: 510px) {
+    .bienvenida{
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 450px) {
+   aside{
+        display: none;
+   }
+   .cuerpo{
+       width: 100%;
+   }
+   .boton-inicio i{
+       font-size: 1.8em;
+   }
+   .boton-inicio{
+       padding: 8px;
+   }
+}

@@ -1,0 +1,156 @@
+@import url(normalize.css);
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    background-image: url(/archivos/imagenes/fondo-formulario.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100%;
+    background-size: cover;
+}
+.Contenedor{
+    display: flex;
+    justify-content: center;
+    height: 80%;
+}
+.Formulario{
+    background-color: #a51616;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 3px black;
+    margin-bottom: 50%;
+}
+.icono{
+    border: 4px solid #FFF;
+    border-radius: 50%;
+    padding: 1em;
+    margin: 20px;
+}
+.icono i{
+    font-size: 2.5em;
+    text-align: center;
+    color: #FFF;
+}
+
+.Formulario input{
+    padding: 0.4em;
+    margin: 0.5em;
+    width: 45%;
+    background: transparent;
+    border-style: none;
+    border: 1px solid #010;
+    color: #FFF;
+}
+.Formulario input::placeholder{
+    color: #FFF;
+}
+.Formulario__grid{
+    display: grid;
+    grid-template-areas: "correo correo"
+    "dni dni"
+    "sexo sexo"
+    "cuit cuit"
+    "telefono telefono"
+    "boton boton";
+    width: 100%;
+    padding: 0 0.7vw;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+.Formulario__grid input{
+    width: 80%;
+}
+.Formulario input:focus{
+    color: #EEE7B2;
+    background: black;
+}
+.Formulario__correo{
+    grid-area: correo;
+    width: 100%;
+}
+
+.Formulario__documento{
+    grid-area: dni;
+}
+.Formulario__sexo{
+    grid-area: sexo;
+    color: #FFF;
+}
+.Formulario__cuit{
+    grid-area: cuit;
+}
+.Formulario__telefono{
+    grid-area: telefono;
+}
+.Formulario__boton{
+ grid-area: boton; 
+ text-align: center;
+ justify-self: end;  
+ 
+}
+.Formulario__boton input{
+    color: #FFF;
+    
+    padding: 15px 30px;
+    border: 1px solid #000;
+    border-radius: 6px;
+}
+.Formulario__grid i{
+    font-size: 1.8em;
+    color: #FFF;
+}
+
+.separador{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Formulario__sexo .separador label:first-child{
+   width: 15%;
+}
+.Formulario__sexo .separador label{
+    width:50%;
+}
+.Formulario__sexo .separador input{
+    width: 10%;
+}
+
+.Formulario__boton input:hover{
+    background: #C51616;
+    border-bottom: 1px solid #FFF;
+    border-right: 2px solid #FFF;
+    transition: 1s;
+}
+
+.Formulario__boton input:active{
+    background: #000;
+    color: #C51616;
+    transition: 1s;
+}
+
+@media screen and (max-width: 600px) {
+   .Formulario input{
+       width: 93.8%;
+   }
+   .Formulario{
+       padding: 15px;
+   }
+   .Formulario__boton input{
+       margin-top: 20px;
+       padding: 15px;
+   }
+}
+@media screen and (max-width: 500px){
+    body{
+        background-image: url(/archivos/imagenes/fondo-formulario-movil.webp);
+    }
+}

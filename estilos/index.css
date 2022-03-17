@@ -1,0 +1,339 @@
+@import url(encabezados.css);
+body{
+    display: flex;
+    flex-direction: column;
+    /* min-height: 100vh; */
+}
+
+main{
+    flex-grow: 1;
+}
+.Ultimo-Resultado{
+    min-height: 100vh;
+    max-height: 100vh;
+    max-width: 100vw;
+    background-image:url(/archivos/imagenes/ultimo-partido.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #FFF;
+}
+
+
+.Ultimo-Resultado__container, .Siguiente-Partido__container{
+    min-height: inherit;
+    width: inherit;
+    display: grid;
+    background-color: rgba(0,0,0,.7);
+    grid-template-areas: "superliga superliga superliga"
+                        "club1 resultado club2";
+                        grid-template-rows: repeat(2, 1fr);
+                        grid-template-columns: 2fr 1fr 2fr;
+}
+
+.Ultimo-Resultado__superliga, .Siguiente-Partido__superliga{
+    grid-area: superliga;
+    justify-self: center;
+    align-self: end;
+}
+.Ultimo-Resultado__superliga img, .Siguiente-Partido__superliga img{
+    width: 50px;
+}
+.Ultimo-Resultado__resultado, .Siguiente-Partido__resultado{
+    grid-area: resultado;
+    justify-self: center;
+    align-self: start;
+    font-family: Impact;
+    font-size: 5em;
+}
+.Siguiente-Partido__resultado{
+    font-size: 3em;
+    padding-top: 20px;
+}
+
+.Ultimo-Resultado__club1, .Siguiente-Partido__club1{
+    grid-area: club1;
+    justify-self: end;
+    align-self: start;
+    text-align: center;
+}
+.Ultimo-Resultado__club1 img, .Ultimo-Resultado__club2 img, .Siguiente-Partido__club1 img, .Siguiente-Partido__club2 img{
+    max-width: 100px;
+}
+.Ultimo-Resultado__club1 h2, .Ultimo-Resultado__club2 h2, .Siguiente-Partido__club1 h2, .Siguiente-Partido__club2 h2{
+    font-size: 2em;
+    font-family:'Franklin Gothic Medium';
+}
+.Ultimo-Resultado__club2, .Siguiente-Partido__club2{
+    grid-area: club2;
+    justify-self: start;
+    align-self: start;
+    text-align: center;
+}
+.Siguiente-Partido{
+    
+    background-image:url(/archivos/imagenes/estadio.webp);
+    min-height: 100vh;
+    max-height: 100vh;
+    max-width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0,0,0,.7); 
+    object-fit: cover;
+    object-position: center;
+    color: #FFF;
+}
+
+.seccion-noticias{
+    display: grid;
+    width: 100%;
+    
+    grid-template-areas: "noticia1 noticia1 noticia2 noticia2"
+    "noticia3 noticia4 noticia5 noticia6";
+    padding: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: 1fr 1.5fr; */
+    background: #f8f8f8;
+    grid-gap: 15px;
+}
+.seccion-noticias h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2em;
+}
+.seccion-noticias p{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.2em;
+}
+
+.seccion-noticias__noticia1, .seccion-noticias__noticia2,.seccion-noticias__noticia3,.seccion-noticias__noticia4,.seccion-noticias__noticia5,.seccion-noticias__noticia6{
+    background: #fff;
+    border: 1px solid #d3cfcf;
+    border-radius: 12px;
+    box-shadow: 0 0 3px #000B;
+}
+.seccion-noticias__noticia1{
+    grid-area: noticia1;
+    
+}
+.seccion-noticias__noticia2{
+    grid-area: noticia2;
+}
+
+.seccion-noticias__noticia3{
+    grid-area: noticia3;
+}
+.seccion-noticias__noticia4{
+    grid-area: noticia4;
+}
+.seccion-noticias__noticia5{
+    grid-area: noticia5;
+}
+.seccion-noticias__noticia6{
+    grid-area: noticia6;
+}
+
+.seccion-noticias__noticia--grande{
+    display: flex;
+    height: 100%;
+}
+.seccion-noticias__noticia--grande-img{
+    width: 50%;
+    Overflow: hidden; 
+}
+.seccion-noticias__noticia--grande-cuerpo{
+   width: 50%;
+   padding: 20px;
+}
+.seccion-noticias__noticia--grande-cuerpo p{
+    padding-top: 15px;
+}
+.noticia--grande-img{
+    height: 100%;   
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    object-fit: cover;
+    object-position:left;
+    Overflow: auto;
+}
+.seccion-noticias__noticia--chica{
+    display: flex;
+    flex-direction: column;
+}
+.seccion-noticias__noticia--chica-img{
+    Overflow: hidden;
+}
+.seccion-noticias__noticia--chica-img img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.seccion-noticias__noticia--chica-cuerpo{
+    padding: 12px;
+    padding-top: 0;
+}
+
+.seccion-noticias__noticia--chica-cuerpo p{
+    padding-top: 10px;
+}
+
+.seccion-copera{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #c70101;
+    height: 100%;
+}
+
+.seccion-copera__tarjeta{
+    margin: 50px 30px;
+    height: 100%;
+    width: auto;
+    background: #1a1a1a;
+    color: #FFF;
+    border-radius: 1em;
+    overflow: auto;
+    box-shadow: 0px 0px 0px 1px rgb(0, 0, 0);
+}
+.seccion-copera__tarjeta, .Ultimo-Resultado, .Siguiente-Partido, .seccion-noticias__noticia--grande, .seccion-noticias__noticia--chica{
+    cursor: pointer;
+}
+.seccion-copera__tarjeta img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+.seccion-copera__tarjeta h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding: 15px;
+}
+
+.seccion-copera__tarjeta p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    padding: 15px;
+}
+
+@media screen and (max-width: 350px) {
+    .seccion-copera{
+        flex-wrap: wrap;
+    }
+    .seccion-copera__tarjeta{
+        width: 50%;
+        margin-bottom: 30px !important;
+    }
+}
+@keyframes zoom{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+@keyframes zoom2{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+.seccion-copera__tarjeta:hover{
+    animation-name: zoom;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+.seccion-noticias__noticia1:hover img, .seccion-noticias__noticia2:hover img, .seccion-noticias__noticia3:hover img, .seccion-noticias__noticia4:hover img, .seccion-noticias__noticia5:hover img, .seccion-noticias__noticia6:hover img{
+    animation-name: zoom2;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+@media screen and (max-width: 810px) {
+    .Ultimo-Resultado{
+        background-image: url(/archivos/imagenes/ultimo-partido2.webp);
+    }
+    .seccion-noticias {
+        display: flex;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+    }
+    .seccion-noticias__noticia1, .seccion-noticias__noticia2{
+        width:100%;
+        height: 100%;
+        display: flex;
+       
+    }
+    .seccion-noticias__noticia--grande{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .seccion-noticias__noticia--grande-img{
+        height: 100%;
+        width: 100% !important;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+    .noticia--grande-img{
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border-bottom-left-radius: 0 !important;
+        overflow: auto;
+    }
+    
+    .seccion-noticias__noticia--grande-cuerpo{
+        padding: 12px;
+        padding-top: 0;
+        width: 100% !important;
+        height: 100%;
+    }
+    
+    .seccion-noticias__noticia--grande-cuerpo p{
+        padding-top: 10px;
+    }
+    .seccion-copera{
+        padding: 35px 2px;
+    }
+    .seccion-copera__tarjeta{
+        margin: 0 4px;
+    }
+    .seccion-copera__tarjeta h3, .seccion-copera__tarjeta p{
+        padding: 10px;
+    }
+    .seccion-copera__tarjeta p{
+        font-size: 0.8em;
+    }
+    .seccion-copera__tarjeta:hover{
+        animation-name: none;
+    }
+    .Ultimo-Resultado, .Siguiente-Partido{
+        min-height: 90vh;
+        max-height: 90vh;
+        
+    }
+    .Ultimo-Resultado__club1, .Ultimo-Resultado__club2, .Siguiente-Partido__club1, .Siguiente-Partido__club2{
+        font-size: 0.3em;
+    }
+    .Ultimo-Resultado__club1 img, .Ultimo-Resultado__club2 img, .Siguiente-Partido__club1 img, .Siguiente-Partido__club2 img{
+        width: 17em;
+    }
+    .Ultimo-Resultado__resultado, .Siguiente-Partido__resultado{
+        font-size: 3em;
+    }
+    .Ultimo-Resultado__container, .Siguiente-Partido__container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
